@@ -3,21 +3,30 @@
 # Ввод: [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 
-lst = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
-print("Изначальный список", lst)
-# диапазон элементов
-min = 0
-max = 10
-# составляем список из элементов диапазона
-lst_new = [i for i in lst if min <= i <= max]
+# lst = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+# print("Изначальный список", lst)
+# # диапазон элементов
+# min = 0
+# max = 10
+# # составляем список из элементов диапазона
+# lst_new = [i for i in lst if min <= i <= max]
 
-# выводим индексы нового списка
-def index_range(lst_new):
-    print("---- Выводим индексы диапазона ----")
-    for i in lst_new:
-        ind = lst.index(i)
-        print(ind, end=" ")
+# # выводим индексы нового списка
+# def index_range(lst_new):
+#     print("---- Выводим индексы диапазона ----")
+#     for i in lst_new:
+#         ind = lst.index(i)
+#         print(ind, end=" ")
 
 
-print("Выводим элементы диапазона:", lst_new)
-index_range(lst_new)
+# print("Выводим элементы диапазона:", lst_new)
+# index_range(lst_new)
+
+# эталонное решение
+
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min_number = int(input())
+max_number = int(input())
+for i in range(len(list_1)):
+    if min_number <= list_1[i] <= max_number:
+        print(i)
