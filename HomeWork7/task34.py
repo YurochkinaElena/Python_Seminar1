@@ -16,7 +16,7 @@ def find_rhythm(text: str):
     phrases = text.split()   # разбили текст на фразы
     phrases_vow = []   # пустой список для фраз, очищенных от согласных
     for i in phrases:   # каждую фразу фильтруем от согласных
-        phrases_vow.append(list(filter(lambda x: x in 'аеиоуэюя', list(i))))
+        phrases_vow.append(list(filter(lambda x: x in 'аеиоуэюя', i)))
     result_list = map(lambda x: len(x) == len(phrases_vow[0]), phrases_vow)
     return all(result_list)
 
